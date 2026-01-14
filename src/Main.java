@@ -13,6 +13,7 @@ public class Main {
         do {
             boolean isValidChoice = false;
 
+            System.out.println();
             System.out.print("Enter your move (rock, paper, scissors): ");
             String userChoice = scanner.nextLine().toLowerCase();
 
@@ -32,17 +33,24 @@ public class Main {
                         userChoice.equals("paper") && computerChoice.equals("rock") ||
                         userChoice.equals("scissors") && computerChoice.equals("paper"))) {
 
+                    System.out.println("********");
                     System.out.println("You won!");
+                    System.out.println("********");
+
                 } else if (userChoice.equals(computerChoice)) {
+                    System.out.println("***********");
                     System.out.println("It's a tie");
+                    System.out.println("***********");
                 } else {
+                    System.out.println("**************");
                     System.out.println("Computer wins");
+                    System.out.println("**************");
                 }
             } else {
                 System.out.println("Invalid choice");
                 continue;
             }
-
+            System.out.println();
             System.out.print("Play again? (Y/N): ");
             String userAnswer = scanner.nextLine().toUpperCase();
 
